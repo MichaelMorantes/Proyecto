@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Admin</title>
+  
+  </head>
+
+  <body>
+
+    </script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#delete').click(function() {
+          alert("Datos eliminados")
+        })
+
+        $('#insert').click(function() {
+          alert("Datos insertados")
+        })
+      });
+    </script>
+    <li><a class="btn btn-primary" href="/" role="button">Home</a></li>
+    <li><a class="btn btn-success" href="/admin/insert" id="insert" role="button">Insertar</a></li>
+    <li><a class="btn btn-danger" href="/admin/delete" id="delete" role="button">Eliminar</a></li>
+  </body>
+</html>

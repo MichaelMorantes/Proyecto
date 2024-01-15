@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="table-responsive">
+    <table id="mytabla" class="table">
+      <thead>
+        <tr>
+          <th scope="col">trabajo</th>
+          <th scope="col">empresa</th>
+          <th scope="col">ssn</th>
+          <th scope="col">residencia</th>
+          <th scope="col">direccion</th>
+          <th scope="col">grupo_sanguineo</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for Customer in perfiles %}
+        <tr>
+          <td>{{ Customer.trabajo }}</td>
+          <td>{{ Customer.empresa }}</td>
+          <td>{{ Customer.ssn }}</td>
+          <td>{{ Customer.residencia }}</td>
+          <td>{{ Customer.direccion }}</td>
+          <td>{{ Customer.grupo_sanguineo }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <a class="btn btn-primary" href="/admin" role="button">admin</a>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+  $(document).ready(function () {
+    $("#mytabla").DataTable({
+      lengthMenu: [
+        [5, 25, 50, -1],
+        [5, 25, 50, "All"],
+      ],
+    });
+  });
+</script>
